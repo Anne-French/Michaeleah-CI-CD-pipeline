@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: ".\SLD521FA2Michaeleah\SLD521 FA2 Michaeleah-Anne Murray.sln"
+        run: .\SLD521FA2Michaeleah\SLD521_FA2_Michaeleah-Anne_Murray.sln
 
       - name: Run tests
         run: echo "Running tests..."
