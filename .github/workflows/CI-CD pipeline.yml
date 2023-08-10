@@ -18,7 +18,7 @@ jobs:
       
 
       - name: Build application
-        run: msbuild /p:Configuration=Release "C:Users/micha/Downloads/Github repost/Michaeleah-CI-CD-pipeline/SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln
+        run: msbuild /p:Configuration=Release C:Users/micha/Downloads/Github repost/Michaeleah-CI-CD-pipeline/SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln
 
   test:
     needs: build
@@ -34,7 +34,7 @@ jobs:
           
 
       - name: Build application
-        run: msbuild /p:Configuration=Release msbuild /p:Configuration=Release "C:Users/micha/Downloads/Github repost/Michaeleah-CI-CD-pipeline/SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln
+        run: msbuild /p:Configuration=Release C:Users/micha/Downloads/Github repost/Michaeleah-CI-CD-pipeline/SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln
 
       - name: Run tests (replace with actual test commands)
         run: echo "Running tests..."
@@ -52,7 +52,7 @@ jobs:
       
 
       - name: Build application
-        run: msbuild /p:Configuration=Release msbuild /p:Configuration=Release "C:Users/micha/Downloads/Github repost/Michaeleah-CI-CD-pipeline/SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln
+        run: msbuild /p:Configuration=Release C:Users/micha/Downloads/Github repost/Michaeleah-CI-CD-pipeline/SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln
 
       - name: Deploy to staging (replace with actual deployment steps)
         run: echo "Deploying to staging..."
