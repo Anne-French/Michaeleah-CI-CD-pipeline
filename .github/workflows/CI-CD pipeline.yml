@@ -15,8 +15,7 @@ jobs:
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
-        with:
-          msbuild-version: 'latest'
+      
 
       - name: Build application
         run: msbuild ./SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln /p:Configuration=Release
@@ -31,8 +30,8 @@ jobs:
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
-        with:
-          msbuild-version: 'latest'
+       
+          
 
       - name: Build application
         run: msbuild ./SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln /p:Configuration=Release
@@ -50,8 +49,7 @@ jobs:
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1
-        with:
-          msbuild-version: 'latest'
+      
 
       - name: Build application
         run: msbuild ./SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln /p:Configuration=Release
