@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Node.js CI/CD
 
 on:
   push:
@@ -6,53 +6,41 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-test:
     runs-on: windows-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1
-      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Choose the desired Node.js version
 
-      - name: Build application
-        run: msbuild /p:Configuration=Release "C:Users/micha/Downloads/Github repost/Michaeleah-CI-CD-pipeline/SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln
+      - name: Install dependencies
+        run: npm install
 
-  test:
-    needs: build
-    runs-on: windows-latest
+      - name: Build
+        run: .\SLD521FA2Michaeleah\SLD521 FA2 Michaeleah-Anne Murray.sln
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1
-       
-          
-
-      - name: Build application
-        run: msbuild /p:Configuration=Release msbuild /p:Configuration=Release "C:Users/micha/Downloads/Github repost/Michaeleah-CI-CD-pipeline/SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln
-
-      - name: Run tests (replace with actual test commands)
+      - name: Run tests
         run: echo "Running tests..."
 
   deploy:
-    needs: test
     runs-on: windows-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1
-      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Choose the desired Node.js version
 
-      - name: Build application
-        run: msbuild /p:Configuration=Release msbuild /p:Configuration=Release "C:Users/micha/Downloads/Github repost/Michaeleah-CI-CD-pipeline/SLD521FA2Michaeleah/SLD521 FA2 Michaeleah-Anne Murray.sln
+      - name: Install dependencies
+        run: npm install
 
       - name: Deploy to staging (replace with actual deployment steps)
         run: echo "Deploying to staging..."
